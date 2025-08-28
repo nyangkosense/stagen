@@ -1,0 +1,10 @@
+{{template "header.tmpl" .}}
+<h2>Log</h2>
+{{range .Commits}}
+<div>
+<p><strong><a href="commit/{{.Hash}}.html">{{.ShortHash}}</a></strong> {{.Subject}}</p>
+<p>{{.Author}} - {{.Date}}</p>
+</div>
+<hr>
+{{end}}
+{{template "footer.tmpl"}}

@@ -1,0 +1,9 @@
+{{template "header.tmpl" .}}
+<h2>Files</h2>
+<p><strong>Last commit:</strong> {{.LastCommit}}</p>
+<table>
+{{range .Files}}
+<tr><td>{{.Mode}}</td><td><a href="file/{{.Path}}.html">{{.Path}}</a></td><td>{{.Size}}</td></tr>
+{{end}}
+</table>
+{{template "footer.tmpl"}}

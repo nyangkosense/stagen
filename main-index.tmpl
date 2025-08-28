@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Git Repositories</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Git Repositories</h1>
+<table>
+<tr><th>Name</th><th>Description</th><th>Last Updated</th></tr>
+{{range .Repos}}
+<tr><td><a href="{{.Dir}}/index.html">{{.Name}}</a></td><td>{{.Desc}}</td><td>{{.LastCommit}}</td></tr>
+{{end}}
+</table>
+</body>
+</html>

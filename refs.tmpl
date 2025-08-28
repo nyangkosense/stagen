@@ -1,0 +1,9 @@
+{{template "header.tmpl" .}}
+<h2>Refs</h2>
+<table>
+<tr><th>Name</th><th>Type</th><th>Hash</th></tr>
+{{range .Refs}}
+<tr><td>{{.Name}}</td><td>{{.Type}}</td><td>{{.Hash}}</td></tr>
+{{end}}
+</table>
+{{template "footer.tmpl"}}

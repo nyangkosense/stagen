@@ -1,0 +1,8 @@
+{{template "header.tmpl" .}}
+<h2>README</h2>
+{{if .ReadmeContent}}
+<pre>{{.ReadmeContent}}</pre>
+{{else}}
+<p>No README file found.</p>
+{{end}}
+{{template "footer.tmpl"}}

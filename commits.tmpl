@@ -1,0 +1,9 @@
+{{template "header.tmpl" .}}
+<h2>Commits</h2>
+<table>
+<tr><th>Hash</th><th>Author</th><th>Date</th><th>Subject</th></tr>
+{{range .Commits}}
+<tr><td><a href="commit/{{.Hash}}.html">{{.ShortHash}}</a></td><td>{{.Author}}</td><td>{{.Date}}</td><td>{{.Subject}}</td></tr>
+{{end}}
+</table>
+{{template "footer.tmpl"}}

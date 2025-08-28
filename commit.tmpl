@@ -1,0 +1,9 @@
+{{template "header.tmpl" .}}
+<h2>{{.ShortHash}}</h2>
+<p><strong>Author:</strong> {{.Author}}</p>
+<p><strong>Date:</strong> {{.Date}}</p>
+<p><strong>Subject:</strong> {{.Subject}}</p>
+{{if .Body}}<p><strong>Body:</strong> {{.Body}}</p>{{end}}
+<h3>Diff</h3>
+<pre>{{.Diff}}</pre>
+{{template "footer.tmpl"}}
